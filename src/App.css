@@ -1,38 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+  font-family: 'Kumbh Sans', sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-top {
+  background-image: url('/public/images/bg-pattern-top.svg');
+  height: 450px;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 70%;
+}
+.bg-bottom {
+  background-image: url('/public/images/bg-pattern-bottom.svg');
+  height: 450px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 60%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  width: 90%;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-bg {
+  background-image: url('/public/images/bg-pattern-card.svg');
+  height: 140px;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.card img {
+  border: 5px solid #fff;
+  border-radius: 50px;
+  position: relative;
+  top: -45px;
+
+}
+.card h2 {
+  position: relative;
+  top: -30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card span {
+  color: hsl(0, 0%, 59%);
+  font-weight: 700;
+
+}
+
+.card p {
+  position: relative;
+  top: -25px;
+  font-size: 14px;
+  color: hsl(0, 0%, 59%);
+}
+
+.container {
+  border-top: 1px solid hsl(0, 0%, 59%);
+}
+
+.row {
+  width: 80%;
+  margin: auto;
+  padding: 1.5em 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.row h1 {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row span {
+  font-size: 11px;
+  letter-spacing: 1px;
 }
