@@ -103,7 +103,7 @@
   font-weight: 400;
 }
 
-@media(min-width: 760px) {
+@media(min-width: 820px) {
   .bg-top {
     background-image: url('/public/images/bg-pattern-top.svg');
     background-repeat: no-repeat;
