@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -15,6 +16,7 @@
 
 .bg-top {
   background-image: url('/public/images/bg-pattern-top.svg');
+  background-repeat: no-repeat;
   height: 450px;
   transform: rotate(180deg);
   position: absolute;
@@ -24,6 +26,7 @@
 }
 .bg-bottom {
   background-image: url('/public/images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
   height: 450px;
   position: absolute;
   bottom: 0px;
@@ -33,6 +36,7 @@
 
 .card {
   width: 90%;
+  max-width: 370px;
   z-index: 100;
   position: absolute;
   top: 50%;
@@ -96,4 +100,37 @@
 .row span {
   font-size: 11px;
   letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@media(min-width: 760px) {
+  .bg-top {
+    background-image: url('/public/images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    height: 500px;
+    transform: rotate(180deg) rotateY(180deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 55%;
+  }
+  .bg-bottom {
+    background-image: url('/public/images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    height: 520px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 53%;
+  }
+
+  .card img:hover {
+    transition: all 1s ease-in;
+    border: 5px solid #000;
+  
+  }
 }
